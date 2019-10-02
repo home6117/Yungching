@@ -4,13 +4,8 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="2741fca6a0a6443f9093d7a26bed057e" Name="Diagram1">
-        <EntityTypeShape EntityType="CartsModel.MSreplication_options" Width="1.5" PointX="3.75" PointY="1.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="CartsModel.spt_fallback_db" Width="1.5" PointX="5.5" PointY="1.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="CartsModel.spt_fallback_dev" Width="1.5" PointX="7.25" PointY="1.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="CartsModel.spt_fallback_usg" Width="1.5" PointX="5.5" PointY="4.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="CartsModel.spt_monitor" Width="1.5" PointX="7.25" PointY="4.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="CartsModel.Product" Width="1.5" PointX="1" PointY="1.5" />
+      <Diagram DiagramId="8d6e9ae187d347308a04b0df6571ff03" Name="Diagram1">
+        <EntityTypeShape EntityType="CartsModel.Products" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
