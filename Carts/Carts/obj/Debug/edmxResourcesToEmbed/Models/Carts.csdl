@@ -3,13 +3,6 @@
   <EntityType Name="Products">
     <Key>
       <PropertyRef Name="Id" />
-      <PropertyRef Name="Name" />
-      <PropertyRef Name="Description" />
-      <PropertyRef Name="CategoryId" />
-      <PropertyRef Name="Price" />
-      <PropertyRef Name="PublishDate" />
-      <PropertyRef Name="Status" />
-      <PropertyRef Name="Quantity" />
     </Key>
     <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />

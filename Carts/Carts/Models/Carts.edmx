@@ -5,18 +5,9 @@
     <!-- SSDL content -->
     <edmx:StorageModels>
       <Schema Namespace="CartsModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
-        <!--產生期間發現錯誤:
-警告 6002: 資料表/檢視 'D:\ABC\WORK4\CARTS\CARTS\APP_DATA\CARTS.MDF.dbo.Products' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
         <EntityType Name="Products">
           <Key>
             <PropertyRef Name="Id" />
-            <PropertyRef Name="Name" />
-            <PropertyRef Name="Description" />
-            <PropertyRef Name="CategoryId" />
-            <PropertyRef Name="Price" />
-            <PropertyRef Name="PublishDate" />
-            <PropertyRef Name="Status" />
-            <PropertyRef Name="Quantity" />
           </Key>
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Name" Type="nvarchar" MaxLength="100" Nullable="false" />
@@ -29,19 +20,7 @@
           <Property Name="Quantity" Type="int" Nullable="false" />
         </EntityType>
         <EntityContainer Name="CartsModelStoreContainer">
-          <EntitySet Name="Products" EntityType="Self.Products" store:Type="Tables" store:Schema="dbo">
-            <DefiningQuery>SELECT 
-    [Products].[Id] AS [Id], 
-    [Products].[Name] AS [Name], 
-    [Products].[Description] AS [Description], 
-    [Products].[CategoryId] AS [CategoryId], 
-    [Products].[Price] AS [Price], 
-    [Products].[PublishDate] AS [PublishDate], 
-    [Products].[Status] AS [Status], 
-    [Products].[DefaultImageId] AS [DefaultImageId], 
-    [Products].[Quantity] AS [Quantity]
-    FROM [dbo].[Products] AS [Products]</DefiningQuery>
-          </EntitySet>
+          <EntitySet Name="Products" EntityType="Self.Products" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
       </Schema>
     </edmx:StorageModels>
@@ -51,13 +30,6 @@
         <EntityType Name="Products">
           <Key>
             <PropertyRef Name="Id" />
-            <PropertyRef Name="Name" />
-            <PropertyRef Name="Description" />
-            <PropertyRef Name="CategoryId" />
-            <PropertyRef Name="Price" />
-            <PropertyRef Name="PublishDate" />
-            <PropertyRef Name="Status" />
-            <PropertyRef Name="Quantity" />
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />

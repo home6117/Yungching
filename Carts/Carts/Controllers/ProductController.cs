@@ -14,6 +14,8 @@ namespace Carts.Controllers
             //宣告回傳商品列表result
             List<Models.Products> result = new List<Models.Products>();
 
+            ViewBag.ResultMessage = TempData["ResultMessage"];
+
             //使用CartsEntities類別，名稱為db
             using (Models.CartsEntities db = new Models.CartsEntities())
             {
@@ -32,18 +34,22 @@ namespace Carts.Controllers
         }
 
         //建立商品頁面 - 資料傳回處理
-        [HttpPost] //指定只有使用POST方法才可進入
+        [HttpPost]
         public ActionResult Create(Models.Products postback)
         {
-            using (Models.CartsEntities db = new Models.CartsEntities())
+            if (this.ModelState.IsValid) //驗證成功
             {
-                //將回傳資料postback加入至Products
-                db.Products.Add(postback);
-
-                //儲存異動資料
-                db.SaveChanges();
+                using (Models.CartsEntities db = new Models.CartsEntities())
+                {
+                    db.Products.Add(postback);
+                    db.SaveChanges();
+                    TempData["ResultMessage"] = String.Format("商品[{0}]成功建立", postback.Name);
+                    return RedirectToAction("Index");
+                }
             }
-            return View();
+
+            ViewBag.ResultMessage = "資料有誤，請檢查";
+            return View(postback);
         }
     }
 }
