@@ -190,6 +190,9 @@
     <Compile Include="Models\MSreplication_options.cs">
       <DependentUpon>Carts.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\Product.cs">
+      <DependentUpon>Carts.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\RouteTest\TempProducts.cs" />
     <Compile Include="Models\spt_fallback_db.cs">
       <DependentUpon>Carts.tt</DependentUpon>
